@@ -19,7 +19,7 @@ public class LCAppInitializer extends AbstractAnnotationConfigDispatcherServletI
 	protected String[] getServletMappings() {
 		System.out.println("==============================");
 		// TODO Auto-generated method stub
-		return new String[]{"/mywebsite.com/*"};
+		return new String[]{"/"};
 	}
 
 }
