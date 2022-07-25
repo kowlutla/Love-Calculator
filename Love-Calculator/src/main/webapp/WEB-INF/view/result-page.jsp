@@ -9,11 +9,17 @@
 <body>
 	<h1 align="center">Love Calculator</h1>
 
-	<hr>
-	<div align="center">
-		<h3>User Name: ${userInfo.userName }</h3>
-		<h3>Crush Name: ${userInfo.crushName }</h3>
-	</div>
+	<br>
+	
+	<h2>The Love Calculate Predicts: </h2>
+	<br>
+	
+	${userInfo.userName } and ${userInfo.crushName } are 
+	FRIENDS
+	<br>
+	<br>
+	
+	<a href="/Love-Calculator/sendEmail">Send Results to Your Email</a>
 
 </body>
 </html>

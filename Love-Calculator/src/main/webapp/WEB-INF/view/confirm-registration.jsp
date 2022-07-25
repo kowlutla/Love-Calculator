@@ -26,5 +26,9 @@
 		</c:forEach>
 	
 	</p>
+	<br>
+	<p>Email: ${userReg.communicationDTO.email}</p>
+	<p>Phone: ${userReg.communicationDTO.phone}</p>
+	<p>Age: ${userReg.age }</p> 
 </body>
 </html>

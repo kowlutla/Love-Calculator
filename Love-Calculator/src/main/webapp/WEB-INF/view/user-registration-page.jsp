@@ -7,13 +7,24 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Love Calculator</title>
+
+<style type="text/css">
+.error {
+	color: red;
+	position: fixed;
+	text-align: left;
+	margin-left: 20px;
+}
+</style>
 </head>
 <body>
 	<h1 align="center">Please register here</h1>
-	<div>
-		<form:form modelAttribute="userReg" action="processRegistration" method="GET">
+	<div align="center">
+		<form:form modelAttribute="userReg" action="processRegistration"
+			method="GET" >
 			<label for="name">Name: </label>
 			<form:input path="name" id="name" />
+			<form:errors path="name" cssClass="error"></form:errors>
 			<br>
 			<br>
 
@@ -43,17 +54,34 @@
 			 <form:checkbox path="hobbies" value="Programming" />Programming
 			<br>
 			<br>
+			
+			<label for="age">Age: </label>
+			<form:input path="age" id="age"/>
+			<form:errors path="age" cssClass="error"></form:errors>
+			
+			<br><br>
 
 			<label for="gender">Gender: </label>
-			<form:radiobutton path="gender" value="Male"/>Male
-			<form:radiobutton path="gender" value="Female"/>Female
-
-			<br><br>
-			<input type="submit" value="Register">
+			<form:radiobutton path="gender" value="Male" />Male
+			<form:radiobutton path="gender" value="Female" />Female
+			
+			<div align="center">
+				
+				<h2>Communication</h2>
+				<label for="email">Email</label>
+				<form:input path="communicationDTO.email"/>
+				
+				<label for="phone">Phone</label>
+				<form:input path="communicationDTO.phone"/>
+				
+			</div>
+		
+			<div>
+				<input type="submit" value="Register">
+			</div>
 
 
 		</form:form>
 	</div>
-
 </body>
 </html>
